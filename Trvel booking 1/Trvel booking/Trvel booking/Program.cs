@@ -232,7 +232,8 @@ namespace Trvel_booking
                 var port = uri.Port;
                 var database = uri.AbsolutePath.TrimStart('/');
 
-                return $"Host={host};Port={port};Database={database};Username={username};Password={password};SSL Mode=Require;Trust Server Certificate=true";
+                var portPart = port == -1 ? "" : $"Port={port};";
+                return $"Host={host};{portPart}Database={database};Username={username};Password={password};SSL Mode=Require;Trust Server Certificate=true";
             }
             catch (Exception ex)
             {
