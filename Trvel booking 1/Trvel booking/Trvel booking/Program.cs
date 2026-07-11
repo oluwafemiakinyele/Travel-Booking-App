@@ -56,8 +56,7 @@ namespace Trvel_booking
                 builder.Host.UseSerilog();
 
                 // Add Database Service (PostgreSQL)
-                var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") 
-                    ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+                var connectionString = GetConnectionString(builder.Configuration);
                 
                 builder.Services.AddDbContext<ApplicationDbContext>(options =>
                     options.UseNpgsql(connectionString, b => b.MigrationsAssembly("Trvel booking"))
@@ -95,7 +94,14 @@ namespace Trvel_booking
                 {
                     options.AddPolicy("AllowReactApp", policy =>
                     {
-                        policy.WithOrigins("http://localhost:5173", "http://localhost:5174")
+                        var allowedOrigins = new List<string> { "http://localhost:5173", "http://localhost:5174" };
+                        var envOrigins = builder.Configuration["CORS_ALLOWED_ORIGINS"];
+                        if (!string.IsNullOrEmpty(envOrigins))
+                        {
+                            allowedOrigins.AddRange(envOrigins.Split(',', StringSplitOptions.RemoveEmptyEntries).Select(o => o.Trim()));
+                        }
+
+                        policy.WithOrigins(allowedOrigins.Distinct().ToArray())
                               .AllowAnyHeader()
                               .AllowAnyMethod()
                               .AllowCredentials();
@@ -204,6 +210,33 @@ namespace Trvel_booking
             finally
             {
                 Log.CloseAndFlush();
+            }
+        }
+
+        private static string GetConnectionString(IConfiguration configuration)
+        {
+            var databaseUrl = Environment.GetEnvironmentVariable("DATABASE_URL");
+            if (string.IsNullOrEmpty(databaseUrl))
+            {
+                return configuration.GetConnectionString("DefaultConnection") 
+                    ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+            }
+
+            try
+            {
+                var uri = new Uri(databaseUrl);
+                var userInfo = uri.UserInfo.Split(':');
+                var username = userInfo[0];
+                var password = userInfo[1];
+                var host = uri.Host;
+                var port = uri.Port;
+                var database = uri.AbsolutePath.TrimStart('/');
+
+                return $"Host={host};Port={port};Database={database};Username={username};Password={password};SSL Mode=Require;Trust Server Certificate=true";
+            }
+            catch (Exception ex)
+            {
+                throw new InvalidOperationException("Failed to parse DATABASE_URL environment variable.", ex);
             }
         }
 
