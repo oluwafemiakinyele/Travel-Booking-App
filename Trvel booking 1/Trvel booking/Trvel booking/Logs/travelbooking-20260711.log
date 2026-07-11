@@ -1,0 +1,10 @@
+2026-07-11 09:47:28.986 +01:00 [INF] Starting Travel Booking REST API host...
+2026-07-11 09:47:38.903 +01:00 [INF] Applying pending database migrations...
+2026-07-11 09:47:41.102 +01:00 [WRN] The property 'Hotel.Images' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2026-07-11 09:47:53.728 +01:00 [INF] Seeding database...
+2026-07-11 09:47:55.512 +01:00 [INF] Flights database seeded/updated.
+2026-07-11 09:47:55.810 +01:00 [INF] Hotels database seeded/updated.
+2026-07-11 09:48:30.131 +01:00 [WRN] Failed to determine the https port for redirect.
+2026-07-11 09:48:31.019 +01:00 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-07-11 09:48:31.265 +01:00 [INF] Searching hotels in City: null
+2026-07-11 09:48:32.005 +01:00 [INF] Searching hotels in City: null

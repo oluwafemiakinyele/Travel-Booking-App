@@ -1,0 +1,111 @@
+2026-06-16 22:56:34.925 +01:00 [INF] Starting Travel Booking REST API host...
+2026-06-16 22:56:49.493 +01:00 [INF] Applying pending database migrations...
+2026-06-16 22:56:52.021 +01:00 [WRN] The property 'Hotel.Images' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2026-06-16 22:56:57.275 +01:00 [INF] Seeding database...
+2026-06-16 23:05:01.669 +01:00 [WRN] Failed to determine the https port for redirect.
+2026-06-16 23:05:02.401 +01:00 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-06-16 23:05:04.525 +01:00 [INF] User 'admin@travelbooking.com' logged in successfully.
+2026-06-16 23:05:14.552 +01:00 [INF] Searching flights for Departure: null, Arrival: null
+2026-06-16 23:05:14.978 +01:00 [INF] Searching flights for Departure: null, Arrival: null
+2026-06-16 23:16:34.766 +01:00 [INF] Starting Travel Booking REST API host...
+2026-06-16 23:16:35.697 +01:00 [INF] Applying pending database migrations...
+2026-06-16 23:16:37.486 +01:00 [WRN] The property 'Hotel.Images' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2026-06-16 23:16:39.682 +01:00 [INF] Seeding database...
+2026-06-16 23:19:55.538 +01:00 [WRN] Failed to determine the https port for redirect.
+2026-06-16 23:21:26.858 +01:00 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-06-16 23:21:26.978 +01:00 [INF] Searching flights for Departure: null, Arrival: null
+2026-06-16 23:21:27.893 +01:00 [INF] Searching flights for Departure: null, Arrival: null
+2026-06-16 23:21:28.022 +01:00 [INF] Searching hotels in City: null
+2026-06-16 23:21:28.237 +01:00 [INF] Searching hotels in City: null
+2026-06-16 23:21:42.428 +01:00 [INF] User 'admin@travelbooking.com' logged in successfully.
+2026-06-16 23:22:12.885 +01:00 [INF] Searching hotels in City: null
+2026-06-16 23:22:12.909 +01:00 [INF] Searching hotels in City: null
+2026-06-16 23:22:18.400 +01:00 [INF] Searching flights for Departure: null, Arrival: null
+2026-06-16 23:22:18.430 +01:00 [INF] Searching flights for Departure: null, Arrival: null
+2026-06-16 23:22:37.903 +01:00 [ERR] An unhandled exception occurred during request processing.
+TrvelBooking.Application.Exceptions.UnauthorizedException: Invalid email or password.
+   at TrvelBooking.Application.Services.AuthService.LoginAsync(LoginDto loginDto) in C:\Users\Phils\Downloads\Trvel booking 1\Trvel booking\TrvelBooking.Application\Services\AuthService.cs:line 72
+   at Trvel_booking.Controllers.AuthController.Login(LoginDto loginDto) in C:\Users\Phils\Downloads\Trvel booking 1\Trvel booking\Trvel booking\Controllers\AuthController.cs:line 31
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Trvel_booking.Middleware.ExceptionMiddleware.InvokeAsync(HttpContext httpContext) in C:\Users\Phils\Downloads\Trvel booking 1\Trvel booking\Trvel booking\Middleware\ExceptionMiddleware.cs:line 26
+2026-06-16 23:32:53.749 +01:00 [INF] Successfully registered user 'Oluwafemi@gmail.com'
+2026-06-16 23:33:01.082 +01:00 [INF] User 'Oluwafemi@gmail.com' logged in successfully.
+2026-06-16 23:33:10.764 +01:00 [INF] Searching flights for Departure: null, Arrival: null
+2026-06-16 23:33:10.781 +01:00 [INF] Searching flights for Departure: null, Arrival: null
+2026-06-16 23:33:15.772 +01:00 [INF] Creating booking for User: "019ed290-ecd5-7369-9d61-763303a101a6", Type: Flight
+2026-06-16 23:33:16.086 +01:00 [INF] Successfully created booking "019ed291-4330-74b8-b551-37988a158258"
+2026-06-16 23:33:16.651 +01:00 [INF] Initializing Paystack payment for Booking "019ed291-4330-74b8-b551-37988a158258", Reference TRV-019ED291-509862
+2026-06-16 23:33:16.855 +01:00 [INF] Initializing Paystack payment for Booking "019ed291-4330-74b8-b551-37988a158258", Reference TRV-019ED291-559579
+2026-06-16 23:37:33.653 +01:00 [INF] Initializing Paystack payment for Booking "019ed291-4330-74b8-b551-37988a158258", Reference TRV-019ED291-532900
+2026-06-16 23:37:35.970 +01:00 [INF] Initializing Paystack payment for Booking "019ed291-4330-74b8-b551-37988a158258", Reference TRV-019ED291-706352
+2026-06-16 23:41:30.064 +01:00 [INF] Initializing Paystack payment for Booking "019ed291-4330-74b8-b551-37988a158258", Reference TRV-019ED291-648090
+2026-06-16 23:41:31.800 +01:00 [INF] Initializing Paystack payment for Booking "019ed291-4330-74b8-b551-37988a158258", Reference TRV-019ED291-004776
+2026-06-16 23:41:44.950 +01:00 [INF] Cancelling booking "019ed291-4330-74b8-b551-37988a158258" requested by User: "019ed290-ecd5-7369-9d61-763303a101a6"
+2026-06-16 23:41:45.006 +01:00 [INF] Successfully cancelled booking "019ed291-4330-74b8-b551-37988a158258"
+2026-06-16 23:41:57.579 +01:00 [INF] Cancelling booking "019ed291-4330-74b8-b551-37988a158258" requested by User: "019ed290-ecd5-7369-9d61-763303a101a6"
+2026-06-16 23:41:57.590 +01:00 [ERR] An unhandled exception occurred during request processing.
+TrvelBooking.Application.Exceptions.BadRequestException: Booking is already cancelled.
+   at TrvelBooking.Application.Services.BookingService.CancelBookingAsync(Guid id, Guid userId, String role) in C:\Users\Phils\Downloads\Trvel booking 1\Trvel booking\TrvelBooking.Application\Services\BookingService.cs:line 151
+   at Trvel_booking.Controllers.BookingsController.Cancel(Guid id) in C:\Users\Phils\Downloads\Trvel booking 1\Trvel booking\Trvel booking\Controllers\BookingsController.cs:line 85
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Trvel_booking.Middleware.ExceptionMiddleware.InvokeAsync(HttpContext httpContext) in C:\Users\Phils\Downloads\Trvel booking 1\Trvel booking\Trvel booking\Middleware\ExceptionMiddleware.cs:line 26
+2026-06-16 23:45:42.646 +01:00 [INF] Searching flights for Departure: null, Arrival: null
+2026-06-16 23:45:42.662 +01:00 [INF] Searching flights for Departure: null, Arrival: null
+2026-06-16 23:46:42.025 +01:00 [INF] User 'Oluwafemi@gmail.com' logged in successfully.
+2026-06-16 23:46:52.034 +01:00 [INF] Searching flights for Departure: null, Arrival: null
+2026-06-16 23:46:52.058 +01:00 [INF] Searching flights for Departure: null, Arrival: null
+2026-06-16 23:47:26.753 +01:00 [INF] Creating booking for User: "019ed290-ecd5-7369-9d61-763303a101a6", Type: Flight
+2026-06-16 23:47:26.782 +01:00 [INF] Successfully created booking "019ed29e-3f25-7824-aab3-fd81bf53fba6"
+2026-06-16 23:47:26.829 +01:00 [INF] Initializing Paystack payment for Booking "019ed29e-3f25-7824-aab3-fd81bf53fba6", Reference TRV-019ED29E-289665
+2026-06-16 23:47:26.957 +01:00 [INF] Initializing Paystack payment for Booking "019ed29e-3f25-7824-aab3-fd81bf53fba6", Reference TRV-019ED29E-572136
+2026-06-16 23:47:28.522 +01:00 [INF] Initializing Paystack payment for Booking "019ed29e-3f25-7824-aab3-fd81bf53fba6", Reference TRV-019ED29E-227831
+2026-06-16 23:48:14.849 +01:00 [INF] User 'admin@travelbooking.com' logged in successfully.
+2026-06-16 23:48:24.224 +01:00 [INF] Searching hotels in City: null
+2026-06-16 23:48:24.232 +01:00 [INF] Searching hotels in City: null
+2026-06-16 23:48:47.045 +01:00 [INF] Searching flights for Departure: null, Arrival: null
+2026-06-16 23:48:47.054 +01:00 [INF] Searching flights for Departure: null, Arrival: null
+2026-06-16 23:49:02.824 +01:00 [INF] Searching flights for Departure: null, Arrival: null
+2026-06-16 23:49:02.838 +01:00 [INF] Searching flights for Departure: null, Arrival: null
+2026-06-16 23:49:04.397 +01:00 [INF] Searching hotels in City: null
+2026-06-16 23:49:04.412 +01:00 [INF] Searching hotels in City: null
+2026-06-16 23:49:05.956 +01:00 [INF] Searching flights for Departure: null, Arrival: null
+2026-06-16 23:49:05.977 +01:00 [INF] Searching flights for Departure: null, Arrival: null
+2026-06-16 23:50:28.626 +01:00 [INF] User 'Oluwafemi@gmail.com' logged in successfully.
+2026-06-16 23:50:36.203 +01:00 [INF] Searching hotels in City: null
+2026-06-16 23:50:36.219 +01:00 [INF] Searching hotels in City: null
+2026-06-16 23:53:13.790 +01:00 [INF] Starting Travel Booking REST API host...
+2026-06-16 23:53:14.408 +01:00 [INF] Applying pending database migrations...
+2026-06-16 23:53:15.477 +01:00 [WRN] The property 'Hotel.Images' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2026-06-16 23:53:17.347 +01:00 [INF] Seeding database...
+2026-06-16 23:58:00.687 +01:00 [WRN] Failed to determine the https port for redirect.
+2026-06-16 23:58:01.143 +01:00 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-06-16 23:58:01.221 +01:00 [INF] Searching flights for Departure: null, Arrival: null
+2026-06-16 23:58:01.845 +01:00 [INF] Searching flights for Departure: null, Arrival: null
+2026-06-16 23:58:05.380 +01:00 [INF] Creating booking for User: "019ed290-ecd5-7369-9d61-763303a101a6", Type: Flight
+2026-06-16 23:58:05.808 +01:00 [INF] Successfully created booking "019ed2a7-fe56-7c15-8a29-9d7ab2f9c009"
+2026-06-16 23:58:06.129 +01:00 [INF] Initializing Paystack payment for Booking "019ed2a7-fe56-7c15-8a29-9d7ab2f9c009", Reference TRV-019ED2A7-288058
+2026-06-16 23:58:06.213 +01:00 [INF] Initializing Paystack payment for Booking "019ed2a7-fe56-7c15-8a29-9d7ab2f9c009", Reference TRV-019ED2A7-137682

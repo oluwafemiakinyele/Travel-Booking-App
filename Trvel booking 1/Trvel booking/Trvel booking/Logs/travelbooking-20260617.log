@@ -1,0 +1,393 @@
+2026-06-17 00:05:58.422 +01:00 [INF] Starting Travel Booking REST API host...
+2026-06-17 00:05:59.823 +01:00 [INF] Applying pending database migrations...
+2026-06-17 00:06:01.631 +01:00 [WRN] The property 'Hotel.Images' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2026-06-17 00:06:03.416 +01:00 [INF] Seeding database...
+2026-06-17 00:06:27.853 +01:00 [WRN] Failed to determine the https port for redirect.
+2026-06-17 00:06:28.257 +01:00 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-06-17 00:06:28.328 +01:00 [INF] Searching flights for Departure: null, Arrival: null
+2026-06-17 00:06:28.931 +01:00 [INF] Searching flights for Departure: null, Arrival: null
+2026-06-17 00:06:32.765 +01:00 [INF] Creating booking for User: "019ed290-ecd5-7369-9d61-763303a101a6", Type: Flight
+2026-06-17 00:06:33.159 +01:00 [INF] Successfully created booking "019ed2af-bc43-7f65-b6ab-2a298570af04"
+2026-06-17 00:06:33.463 +01:00 [INF] Initializing Paystack payment for Booking "019ed2af-bc43-7f65-b6ab-2a298570af04", Reference TRV-019ED2AF-626471
+2026-06-17 00:06:33.558 +01:00 [INF] Initializing Paystack payment for Booking "019ed2af-bc43-7f65-b6ab-2a298570af04", Reference TRV-019ED2AF-579868
+2026-06-17 00:06:57.730 +01:00 [INF] Verifying payment for Reference: null
+2026-06-17 00:06:57.776 +01:00 [ERR] An unhandled exception occurred during request processing.
+TrvelBooking.Application.Exceptions.NotFoundException: Payment record not found for reference: null
+   at TrvelBooking.Application.Services.PaymentService.VerifyPaymentAsync(String reference) in C:\Users\Phils\Downloads\Trvel booking 1\Trvel booking\TrvelBooking.Application\Services\PaymentService.cs:line 102
+   at Trvel_booking.Controllers.PaymentsController.Verify(String reference) in C:\Users\Phils\Downloads\Trvel booking 1\Trvel booking\Trvel booking\Controllers\PaymentsController.cs:line 41
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Trvel_booking.Middleware.ExceptionMiddleware.InvokeAsync(HttpContext httpContext) in C:\Users\Phils\Downloads\Trvel booking 1\Trvel booking\Trvel booking\Middleware\ExceptionMiddleware.cs:line 26
+2026-06-17 00:10:50.946 +01:00 [INF] Verifying payment for Reference: TRV-019ED2AF-626471
+2026-06-17 00:10:52.010 +01:00 [INF] Payment successful. Confirmed booking "019ed2af-bc43-7f65-b6ab-2a298570af04".
+2026-06-17 00:11:38.959 +01:00 [INF] User 'admin@travelbooking.com' logged in successfully.
+2026-06-17 00:12:44.557 +01:00 [INF] User 'Oluwafemi@gmail.com' logged in successfully.
+2026-06-17 00:12:47.547 +01:00 [INF] Searching hotels in City: null
+2026-06-17 00:12:47.671 +01:00 [INF] Searching hotels in City: null
+2026-06-17 00:16:39.578 +01:00 [INF] Creating booking for User: "019ed290-ecd5-7369-9d61-763303a101a6", Type: Hotel
+2026-06-17 00:16:39.823 +01:00 [ERR] Failed executing DbCommand (26ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?', @p2='?', @p3='?' (DbType = DateTime), @p4='?' (DbType = DateTime), @p5='?' (DbType = DateTime), @p6='?' (DbType = Guid), @p7='?' (DbType = Guid), @p8='?' (DbType = Int32), @p9='?' (DbType = Decimal), @p10='?' (DbType = Guid), @p19='?' (DbType = Guid), @p11='?', @p12='?' (DbType = Int32), @p13='?', @p14='?', @p15='?', @p16='?', @p17='?' (DbType = Decimal), @p18='?' (DbType = Double)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Bookings" ("Id", "BookingStatus", "BookingType", "CheckInDate", "CheckOutDate", "CreatedAt", "FlightId", "HotelId", "NumberOfGuests", "TotalAmount", "UserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10);
+UPDATE "Hotels" SET "Address" = @p11, "AvailableRooms" = @p12, "City" = @p13, "Description" = @p14, "Images" = @p15, "Name" = @p16, "PricePerNight" = @p17, "Rating" = @p18
+WHERE "Id" = @p19;
+2026-06-17 00:16:39.936 +01:00 [ERR] An exception occurred in the database while saving changes for context type 'TrvelBooking.Infrastructure.Persistence.ApplicationDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> System.ArgumentException: Cannot write DateTime with Kind=Unspecified to PostgreSQL type 'timestamp with time zone', only UTC is supported. Note that it's not possible to mix DateTimes with different Kinds in an array, range, or multirange. (Parameter 'value')
+   at Npgsql.Internal.Converters.DateTimeConverterResolver`1.Get(DateTime value, Nullable`1 expectedPgTypeId, Boolean validateOnly)
+   at Npgsql.Internal.Converters.DateTimeConverterResolver.<>c.<CreateResolver>b__0_0(DateTimeConverterResolver`1 resolver, DateTime value, Nullable`1 expectedPgTypeId)
+   at Npgsql.Internal.Converters.DateTimeConverterResolver`1.Get(T value, Nullable`1 expectedPgTypeId)
+   at Npgsql.Internal.PgConverterResolver`1.GetAsObjectInternal(PgTypeInfo typeInfo, Object value, Nullable`1 expectedPgTypeId)
+   at Npgsql.NpgsqlParameter.ResolveTypeInfo(PgSerializerOptions options)
+   at Npgsql.NpgsqlParameterCollection.ProcessParameters(PgSerializerOptions options, Boolean validateValues, CommandType commandType)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> System.ArgumentException: Cannot write DateTime with Kind=Unspecified to PostgreSQL type 'timestamp with time zone', only UTC is supported. Note that it's not possible to mix DateTimes with different Kinds in an array, range, or multirange. (Parameter 'value')
+   at Npgsql.Internal.Converters.DateTimeConverterResolver`1.Get(DateTime value, Nullable`1 expectedPgTypeId, Boolean validateOnly)
+   at Npgsql.Internal.Converters.DateTimeConverterResolver.<>c.<CreateResolver>b__0_0(DateTimeConverterResolver`1 resolver, DateTime value, Nullable`1 expectedPgTypeId)
+   at Npgsql.Internal.Converters.DateTimeConverterResolver`1.Get(T value, Nullable`1 expectedPgTypeId)
+   at Npgsql.Internal.PgConverterResolver`1.GetAsObjectInternal(PgTypeInfo typeInfo, Object value, Nullable`1 expectedPgTypeId)
+   at Npgsql.NpgsqlParameter.ResolveTypeInfo(PgSerializerOptions options)
+   at Npgsql.NpgsqlParameterCollection.ProcessParameters(PgSerializerOptions options, Boolean validateValues, CommandType commandType)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-06-17 00:16:39.942 +01:00 [ERR] An unhandled exception occurred during request processing.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> System.ArgumentException: Cannot write DateTime with Kind=Unspecified to PostgreSQL type 'timestamp with time zone', only UTC is supported. Note that it's not possible to mix DateTimes with different Kinds in an array, range, or multirange. (Parameter 'value')
+   at Npgsql.Internal.Converters.DateTimeConverterResolver`1.Get(DateTime value, Nullable`1 expectedPgTypeId, Boolean validateOnly)
+   at Npgsql.Internal.Converters.DateTimeConverterResolver.<>c.<CreateResolver>b__0_0(DateTimeConverterResolver`1 resolver, DateTime value, Nullable`1 expectedPgTypeId)
+   at Npgsql.Internal.Converters.DateTimeConverterResolver`1.Get(T value, Nullable`1 expectedPgTypeId)
+   at Npgsql.Internal.PgConverterResolver`1.GetAsObjectInternal(PgTypeInfo typeInfo, Object value, Nullable`1 expectedPgTypeId)
+   at Npgsql.NpgsqlParameter.ResolveTypeInfo(PgSerializerOptions options)
+   at Npgsql.NpgsqlParameterCollection.ProcessParameters(PgSerializerOptions options, Boolean validateValues, CommandType commandType)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at TrvelBooking.Infrastructure.Persistence.UnitOfWork.CompleteAsync() in C:\Users\Phils\Downloads\Trvel booking 1\Trvel booking\TrvelBooking.Infrastructure\Persistence\UnitOfWork.cs:line 29
+   at TrvelBooking.Application.Services.BookingService.CreateBookingAsync(Guid userId, CreateBookingDto bookingDto) in C:\Users\Phils\Downloads\Trvel booking 1\Trvel booking\TrvelBooking.Application\Services\BookingService.cs:line 101
+   at Trvel_booking.Controllers.BookingsController.Create(CreateBookingDto bookingDto) in C:\Users\Phils\Downloads\Trvel booking 1\Trvel booking\Trvel booking\Controllers\BookingsController.cs:line 32
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Trvel_booking.Middleware.ExceptionMiddleware.InvokeAsync(HttpContext httpContext) in C:\Users\Phils\Downloads\Trvel booking 1\Trvel booking\Trvel booking\Middleware\ExceptionMiddleware.cs:line 26
+2026-06-17 00:16:43.102 +01:00 [INF] Creating booking for User: "019ed290-ecd5-7369-9d61-763303a101a6", Type: Hotel
+2026-06-17 00:16:43.110 +01:00 [ERR] Failed executing DbCommand (0ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?', @p2='?', @p3='?' (DbType = DateTime), @p4='?' (DbType = DateTime), @p5='?' (DbType = DateTime), @p6='?' (DbType = Guid), @p7='?' (DbType = Guid), @p8='?' (DbType = Int32), @p9='?' (DbType = Decimal), @p10='?' (DbType = Guid), @p19='?' (DbType = Guid), @p11='?', @p12='?' (DbType = Int32), @p13='?', @p14='?', @p15='?', @p16='?', @p17='?' (DbType = Decimal), @p18='?' (DbType = Double)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Bookings" ("Id", "BookingStatus", "BookingType", "CheckInDate", "CheckOutDate", "CreatedAt", "FlightId", "HotelId", "NumberOfGuests", "TotalAmount", "UserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10);
+UPDATE "Hotels" SET "Address" = @p11, "AvailableRooms" = @p12, "City" = @p13, "Description" = @p14, "Images" = @p15, "Name" = @p16, "PricePerNight" = @p17, "Rating" = @p18
+WHERE "Id" = @p19;
+2026-06-17 00:16:43.114 +01:00 [ERR] An exception occurred in the database while saving changes for context type 'TrvelBooking.Infrastructure.Persistence.ApplicationDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> System.ArgumentException: Cannot write DateTime with Kind=Unspecified to PostgreSQL type 'timestamp with time zone', only UTC is supported. Note that it's not possible to mix DateTimes with different Kinds in an array, range, or multirange. (Parameter 'value')
+   at Npgsql.Internal.Converters.DateTimeConverterResolver`1.Get(DateTime value, Nullable`1 expectedPgTypeId, Boolean validateOnly)
+   at Npgsql.Internal.Converters.DateTimeConverterResolver.<>c.<CreateResolver>b__0_0(DateTimeConverterResolver`1 resolver, DateTime value, Nullable`1 expectedPgTypeId)
+   at Npgsql.Internal.Converters.DateTimeConverterResolver`1.Get(T value, Nullable`1 expectedPgTypeId)
+   at Npgsql.Internal.PgConverterResolver`1.GetAsObjectInternal(PgTypeInfo typeInfo, Object value, Nullable`1 expectedPgTypeId)
+   at Npgsql.NpgsqlParameter.ResolveTypeInfo(PgSerializerOptions options)
+   at Npgsql.NpgsqlParameterCollection.ProcessParameters(PgSerializerOptions options, Boolean validateValues, CommandType commandType)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> System.ArgumentException: Cannot write DateTime with Kind=Unspecified to PostgreSQL type 'timestamp with time zone', only UTC is supported. Note that it's not possible to mix DateTimes with different Kinds in an array, range, or multirange. (Parameter 'value')
+   at Npgsql.Internal.Converters.DateTimeConverterResolver`1.Get(DateTime value, Nullable`1 expectedPgTypeId, Boolean validateOnly)
+   at Npgsql.Internal.Converters.DateTimeConverterResolver.<>c.<CreateResolver>b__0_0(DateTimeConverterResolver`1 resolver, DateTime value, Nullable`1 expectedPgTypeId)
+   at Npgsql.Internal.Converters.DateTimeConverterResolver`1.Get(T value, Nullable`1 expectedPgTypeId)
+   at Npgsql.Internal.PgConverterResolver`1.GetAsObjectInternal(PgTypeInfo typeInfo, Object value, Nullable`1 expectedPgTypeId)
+   at Npgsql.NpgsqlParameter.ResolveTypeInfo(PgSerializerOptions options)
+   at Npgsql.NpgsqlParameterCollection.ProcessParameters(PgSerializerOptions options, Boolean validateValues, CommandType commandType)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-06-17 00:16:43.119 +01:00 [ERR] An unhandled exception occurred during request processing.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> System.ArgumentException: Cannot write DateTime with Kind=Unspecified to PostgreSQL type 'timestamp with time zone', only UTC is supported. Note that it's not possible to mix DateTimes with different Kinds in an array, range, or multirange. (Parameter 'value')
+   at Npgsql.Internal.Converters.DateTimeConverterResolver`1.Get(DateTime value, Nullable`1 expectedPgTypeId, Boolean validateOnly)
+   at Npgsql.Internal.Converters.DateTimeConverterResolver.<>c.<CreateResolver>b__0_0(DateTimeConverterResolver`1 resolver, DateTime value, Nullable`1 expectedPgTypeId)
+   at Npgsql.Internal.Converters.DateTimeConverterResolver`1.Get(T value, Nullable`1 expectedPgTypeId)
+   at Npgsql.Internal.PgConverterResolver`1.GetAsObjectInternal(PgTypeInfo typeInfo, Object value, Nullable`1 expectedPgTypeId)
+   at Npgsql.NpgsqlParameter.ResolveTypeInfo(PgSerializerOptions options)
+   at Npgsql.NpgsqlParameterCollection.ProcessParameters(PgSerializerOptions options, Boolean validateValues, CommandType commandType)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at TrvelBooking.Infrastructure.Persistence.UnitOfWork.CompleteAsync() in C:\Users\Phils\Downloads\Trvel booking 1\Trvel booking\TrvelBooking.Infrastructure\Persistence\UnitOfWork.cs:line 29
+   at TrvelBooking.Application.Services.BookingService.CreateBookingAsync(Guid userId, CreateBookingDto bookingDto) in C:\Users\Phils\Downloads\Trvel booking 1\Trvel booking\TrvelBooking.Application\Services\BookingService.cs:line 101
+   at Trvel_booking.Controllers.BookingsController.Create(CreateBookingDto bookingDto) in C:\Users\Phils\Downloads\Trvel booking 1\Trvel booking\Trvel booking\Controllers\BookingsController.cs:line 32
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Trvel_booking.Middleware.ExceptionMiddleware.InvokeAsync(HttpContext httpContext) in C:\Users\Phils\Downloads\Trvel booking 1\Trvel booking\Trvel booking\Middleware\ExceptionMiddleware.cs:line 26
+2026-06-17 00:18:47.516 +01:00 [INF] Starting Travel Booking REST API host...
+2026-06-17 00:18:48.154 +01:00 [INF] Applying pending database migrations...
+2026-06-17 00:18:49.516 +01:00 [WRN] The property 'Hotel.Images' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2026-06-17 00:18:50.504 +01:00 [WRN] The property 'Hotel.Images' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2026-06-17 00:18:50.591 +01:00 [ERR] An error occurred while migrating or seeding the database.
+System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'ApplicationDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+   at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Migrations.Internal.NpgsqlMigrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at Trvel_booking.Program.PrepareDatabaseAsync(WebApplication app) in C:\Users\Phils\Downloads\Trvel booking 1\Trvel booking\Trvel booking\Program.cs:line 220
+2026-06-17 00:19:36.514 +01:00 [INF] Starting Travel Booking REST API host...
+2026-06-17 00:19:37.132 +01:00 [INF] Applying pending database migrations...
+2026-06-17 00:19:38.566 +01:00 [WRN] The property 'Hotel.Images' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2026-06-17 00:19:39.890 +01:00 [INF] Seeding database...
+2026-06-17 00:21:09.183 +01:00 [WRN] Failed to determine the https port for redirect.
+2026-06-17 00:21:30.481 +01:00 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-06-17 00:21:30.547 +01:00 [INF] Searching flights for Departure: null, Arrival: null
+2026-06-17 00:21:35.457 +01:00 [INF] Searching hotels in City: null
+2026-06-17 00:22:18.711 +01:00 [ERR] An unhandled exception occurred during request processing.
+TrvelBooking.Application.Exceptions.UnauthorizedException: Invalid email or password.
+   at TrvelBooking.Application.Services.AuthService.LoginAsync(LoginDto loginDto) in C:\Users\Phils\Downloads\Trvel booking 1\Trvel booking\TrvelBooking.Application\Services\AuthService.cs:line 72
+   at Trvel_booking.Controllers.AuthController.Login(LoginDto loginDto) in C:\Users\Phils\Downloads\Trvel booking 1\Trvel booking\Trvel booking\Controllers\AuthController.cs:line 31
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Trvel_booking.Middleware.ExceptionMiddleware.InvokeAsync(HttpContext httpContext) in C:\Users\Phils\Downloads\Trvel booking 1\Trvel booking\Trvel booking\Middleware\ExceptionMiddleware.cs:line 26
+2026-06-17 00:22:25.385 +01:00 [INF] User 'admin@travelbooking.com' logged in successfully.
+2026-06-17 00:22:38.707 +01:00 [INF] User 'admin@travelbooking.com' logged in successfully.
+2026-06-17 00:22:39.135 +01:00 [INF] Creating booking for User: "e14e5202-637c-4b99-a478-854917ae2fd7", Type: Hotel
+2026-06-17 00:22:39.435 +01:00 [INF] Successfully created booking "019ed2be-7b0b-7b5d-a5d1-4fea25269e22"
+2026-06-17 00:23:45.506 +01:00 [INF] Creating booking for User: "019ed290-ecd5-7369-9d61-763303a101a6", Type: Hotel
+2026-06-17 00:23:45.520 +01:00 [INF] Successfully created booking "019ed2bf-7dea-714f-b432-c508ecfe6ebc"
+2026-06-17 00:23:45.637 +01:00 [INF] Initializing Paystack payment for Booking "019ed2bf-7dea-714f-b432-c508ecfe6ebc", Reference TRV-019ED2BF-366441
+2026-06-17 00:23:45.744 +01:00 [INF] Initializing Paystack payment for Booking "019ed2bf-7dea-714f-b432-c508ecfe6ebc", Reference TRV-019ED2BF-444731
+2026-06-17 00:23:57.921 +01:00 [INF] Verifying payment for Reference: TRV-019ED2BF-366441
+2026-06-17 00:23:58.264 +01:00 [INF] Payment successful. Confirmed booking "019ed2bf-7dea-714f-b432-c508ecfe6ebc".
+2026-06-17 00:23:58.296 +01:00 [INF] Verifying payment for Reference: TRV-019ED2BF-366441
+2026-06-17 00:25:48.981 +01:00 [INF] Initializing Paystack payment for Booking "019ed2a7-fe56-7c15-8a29-9d7ab2f9c009", Reference TRV-019ED2A7-817019
+2026-06-17 00:25:49.005 +01:00 [INF] Initializing Paystack payment for Booking "019ed2a7-fe56-7c15-8a29-9d7ab2f9c009", Reference TRV-019ED2A7-058951
+2026-06-17 00:26:59.548 +01:00 [INF] Initializing Paystack payment for Booking "019ed29e-3f25-7824-aab3-fd81bf53fba6", Reference TRV-019ED29E-483543
+2026-06-17 00:26:59.549 +01:00 [INF] Initializing Paystack payment for Booking "019ed29e-3f25-7824-aab3-fd81bf53fba6", Reference TRV-019ED29E-495653
+2026-06-17 00:27:10.761 +01:00 [INF] Verifying payment for Reference: TRV-019ED29E-483543
+2026-06-17 00:27:11.036 +01:00 [INF] Payment successful. Confirmed booking "019ed29e-3f25-7824-aab3-fd81bf53fba6".
+2026-06-17 00:27:11.047 +01:00 [INF] Verifying payment for Reference: TRV-019ED29E-483543
+2026-06-17 00:27:28.604 +01:00 [INF] User 'admin@travelbooking.com' logged in successfully.
+2026-06-17 00:27:53.082 +01:00 [INF] Searching hotels in City: null
+2026-06-17 00:27:53.097 +01:00 [INF] Searching hotels in City: null
+2026-06-17 14:29:00.715 +01:00 [INF] Searching hotels in City: null
+2026-06-17 14:29:00.912 +01:00 [INF] Searching hotels in City: null
+2026-06-17 14:29:18.310 +01:00 [INF] Searching flights for Departure: null, Arrival: null
+2026-06-17 14:29:18.353 +01:00 [INF] Searching flights for Departure: null, Arrival: null
+2026-06-17 14:29:21.884 +01:00 [INF] Searching hotels in City: null
+2026-06-17 14:29:21.911 +01:00 [INF] Searching hotels in City: null
+2026-06-17 14:29:28.303 +01:00 [INF] Searching flights for Departure: null, Arrival: null
+2026-06-17 14:29:28.343 +01:00 [INF] Searching flights for Departure: null, Arrival: null
+2026-06-17 14:29:29.785 +01:00 [INF] Searching hotels in City: null
+2026-06-17 14:29:29.804 +01:00 [INF] Searching hotels in City: null
+2026-06-17 14:32:15.427 +01:00 [INF] Starting Travel Booking REST API host...
+2026-06-17 14:32:16.036 +01:00 [INF] Applying pending database migrations...
+2026-06-17 14:32:17.658 +01:00 [WRN] The property 'Hotel.Images' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2026-06-17 14:32:19.326 +01:00 [INF] Seeding database...
+2026-06-17 14:32:55.925 +01:00 [WRN] Failed to determine the https port for redirect.
+2026-06-17 14:32:56.274 +01:00 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-06-17 14:32:56.356 +01:00 [INF] Searching hotels in City: null
+2026-06-17 14:32:57.155 +01:00 [INF] Searching hotels in City: null
+2026-06-17 14:33:00.056 +01:00 [INF] Searching flights for Departure: null, Arrival: null
+2026-06-17 14:33:00.192 +01:00 [INF] Searching flights for Departure: null, Arrival: null
+2026-06-17 14:35:03.418 +01:00 [INF] User 'admin@travelbooking.com' logged in successfully.
+2026-06-17 14:35:09.307 +01:00 [INF] User 'admin@travelbooking.com' logged in successfully.
+2026-06-17 14:35:20.925 +01:00 [INF] User 'admin@travelbooking.com' logged in successfully.
+2026-06-17 14:35:23.162 +01:00 [INF] Searching flights for Departure: null, Arrival: null
+2026-06-17 14:35:23.179 +01:00 [INF] Searching flights for Departure: null, Arrival: null
+2026-06-17 14:35:24.281 +01:00 [INF] Searching hotels in City: null
+2026-06-17 14:35:24.293 +01:00 [INF] Searching hotels in City: null
+2026-06-17 14:38:51.568 +01:00 [INF] Starting Travel Booking REST API host...
+2026-06-17 14:38:52.216 +01:00 [INF] Applying pending database migrations...
+2026-06-17 14:38:53.515 +01:00 [WRN] The property 'Hotel.Images' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2026-06-17 14:38:55.036 +01:00 [INF] Seeding database...
+2026-06-17 14:39:08.556 +01:00 [WRN] Failed to determine the https port for redirect.
+2026-06-17 14:39:08.872 +01:00 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-06-17 14:39:09.844 +01:00 [INF] User 'admin@travelbooking.com' logged in successfully.
+2026-06-17 14:39:10.179 +01:00 [INF] Searching flights for Departure: null, Arrival: null
+2026-06-17 14:39:11.138 +01:00 [INF] Creating booking for User: "e14e5202-637c-4b99-a478-854917ae2fd7", Type: Flight
+2026-06-17 14:39:11.395 +01:00 [INF] Successfully created booking "019ed5ce-a906-7e07-a6d1-66ac39f357e7"
+2026-06-17 14:39:29.970 +01:00 [INF] User 'admin@travelbooking.com' logged in successfully.
+2026-06-17 14:39:30.154 +01:00 [INF] Initializing Paystack payment for Booking "019ed5ce-a906-7e07-a6d1-66ac39f357e7", Reference TRV-019ED5CE-541910
+2026-06-17 14:39:47.685 +01:00 [INF] User 'admin@travelbooking.com' logged in successfully.
+2026-06-17 14:39:47.903 +01:00 [INF] Verifying payment for Reference: TRV-019ED5CE-541910
+2026-06-17 14:40:25.302 +01:00 [INF] User 'admin@travelbooking.com' logged in successfully.
+2026-06-17 14:40:27.646 +01:00 [INF] Searching hotels in City: null
+2026-06-17 14:40:27.759 +01:00 [INF] Searching hotels in City: null
+2026-06-17 14:40:31.671 +01:00 [INF] User 'admin@travelbooking.com' logged in successfully.
+2026-06-17 14:40:34.002 +01:00 [INF] Searching hotels in City: null
+2026-06-17 14:40:34.475 +01:00 [INF] Searching hotels in City: null
+2026-06-17 14:40:40.265 +01:00 [INF] User 'admin@travelbooking.com' logged in successfully.
+2026-06-17 14:43:21.626 +01:00 [INF] User 'Oluwafemi@gmail.com' logged in successfully.
+2026-06-17 14:49:36.574 +01:00 [INF] User 'Oluwafemi@gmail.com' logged in successfully.
+2026-06-17 14:49:39.742 +01:00 [INF] Searching flights for Departure: null, Arrival: null
+2026-06-17 14:49:39.777 +01:00 [INF] Searching flights for Departure: null, Arrival: null
+2026-06-17 14:53:09.650 +01:00 [INF] Starting Travel Booking REST API host...
+2026-06-17 14:53:10.643 +01:00 [INF] Applying pending database migrations...
+2026-06-17 14:53:11.871 +01:00 [WRN] The property 'Hotel.Images' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2026-06-17 14:53:13.545 +01:00 [INF] Seeding database...
+2026-06-17 14:53:14.666 +01:00 [INF] Flights database seeded/updated.
+2026-06-17 14:53:14.947 +01:00 [INF] Hotels database seeded/updated.
+2026-06-17 14:54:09.143 +01:00 [WRN] Failed to determine the https port for redirect.
+2026-06-17 14:54:09.604 +01:00 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-06-17 14:54:09.676 +01:00 [INF] Searching flights for Departure: null, Arrival: null
+2026-06-17 14:55:24.549 +01:00 [INF] Searching flights for Departure: null, Arrival: null
+2026-06-17 14:55:24.596 +01:00 [INF] Searching flights for Departure: null, Arrival: null
+2026-06-17 14:56:20.627 +01:00 [INF] Searching flights for Departure: null, Arrival: null
+2026-06-17 14:56:20.643 +01:00 [INF] Searching flights for Departure: null, Arrival: null
+2026-06-17 14:58:58.309 +01:00 [ERR] An unhandled exception occurred during request processing.
+TrvelBooking.Application.Exceptions.BadRequestException: User with email 'Oluwafemi@gmail.com' already exists.
+   at TrvelBooking.Application.Services.AuthService.RegisterAsync(RegisterDto registerDto) in C:\Users\Phils\Downloads\Trvel booking 1\Trvel booking\TrvelBooking.Application\Services\AuthService.cs:line 42
+   at Trvel_booking.Controllers.AuthController.Register(RegisterDto registerDto) in C:\Users\Phils\Downloads\Trvel booking 1\Trvel booking\Trvel booking\Controllers\AuthController.cs:line 24
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Trvel_booking.Middleware.ExceptionMiddleware.InvokeAsync(HttpContext httpContext) in C:\Users\Phils\Downloads\Trvel booking 1\Trvel booking\Trvel booking\Middleware\ExceptionMiddleware.cs:line 26
+2026-06-17 14:59:37.850 +01:00 [INF] Successfully registered user 'gbkosigift@gmil.com'
+2026-06-17 15:00:38.893 +01:00 [INF] User 'admin@travelbooking.com' logged in successfully.
+2026-06-17 15:02:52.696 +01:00 [INF] Successfully registered user 'gbkosiggift@gmiil.com'
+2026-06-17 15:03:00.664 +01:00 [INF] User 'gbkosiggift@gmiil.com' logged in successfully.
+2026-06-17 15:03:16.867 +01:00 [INF] Searching hotels in City: null
+2026-06-17 15:03:16.943 +01:00 [INF] Searching hotels in City: null
+2026-06-17 15:03:29.505 +01:00 [INF] Searching flights for Departure: null, Arrival: null
+2026-06-17 15:03:29.521 +01:00 [INF] Searching flights for Departure: null, Arrival: null
+2026-06-17 15:03:48.966 +01:00 [INF] Creating booking for User: "019ed5e4-5993-7498-9949-11e231c92893", Type: Flight
+2026-06-17 15:03:49.100 +01:00 [INF] Successfully created booking "019ed5e5-358d-7ad3-97c2-ca39ee79073b"
+2026-06-17 15:03:49.295 +01:00 [INF] Initializing Paystack payment for Booking "019ed5e5-358d-7ad3-97c2-ca39ee79073b", Reference TRV-019ED5E5-948592
+2026-06-17 15:03:49.425 +01:00 [INF] Initializing Paystack payment for Booking "019ed5e5-358d-7ad3-97c2-ca39ee79073b", Reference TRV-019ED5E5-251313
+2026-06-17 15:04:07.616 +01:00 [INF] Verifying payment for Reference: TRV-019ED5E5-948592
+2026-06-17 15:04:08.018 +01:00 [INF] Payment successful. Confirmed booking "019ed5e5-358d-7ad3-97c2-ca39ee79073b".
+2026-06-17 15:04:08.036 +01:00 [INF] Verifying payment for Reference: TRV-019ED5E5-948592
+2026-06-17 15:08:06.223 +01:00 [INF] User 'admin@travelbooking.com' logged in successfully.
+2026-06-17 15:08:41.008 +01:00 [INF] Searching hotels in City: null
+2026-06-17 15:08:41.043 +01:00 [INF] Searching hotels in City: null
